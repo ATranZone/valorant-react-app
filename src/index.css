@@ -2,12 +2,67 @@
 
 :root{
   font-family:Poppins;
+  min-width:320px;
 }
 
-.nav-bar{
-  display:flex;
-  justify-content: center;
+body{
+  margin:0;
 }
+
+li{
+  list-style-type:none;
+}
+
+@media (width<354px){
+  .nav-bar{
+    display:flex;
+    flex-direction:column;
+    justify-content: center; 
+    min-width:100%
+  }
+
+  .nav-title{
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:1%;
+  }
+
+  .nav-link-list{
+    
+    display:flex;
+    align-self:center;
+    margin-left:auto;
+    margin-right:auto;
+    gap:1em;
+    padding:0;
+  }
+}
+@media (width>=354px){
+  .nav-bar{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    min-width:100%
+  }
+
+  .nav-title{
+    margin-left:1%;
+  }
+
+  .nav-link-list{
+    display:flex;
+    align-self:center;
+    margin-left:auto;
+    margin-right:1%;
+    gap:1em;
+    padding:0;
+  }
+}
+
+
+
+
+
 
 .main-wrapper{
   display:flex;
@@ -23,18 +78,27 @@
   justify-content: center;
 }
 
-.agentCard{
-  /* background-color: red; */
-  display:flex;
-  flex-direction: column;
-  /* border:solid 1px black; */
-  max-width:40%;
-  margin:15px 15px;
-  box-shadow: 0px 0px 25px -20px;
+@media (width>632px){
+  .agentCard{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    max-width:40%;
+    margin:15px 15px;
+    box-shadow: 0px 0px 25px -20px;
+    font-size:16px;
+  }
 }
-
+@media (width<=632px){
+  .agentCard{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    box-shadow: 0px 0px 25px -20px;
+    font-size:12px;
+  }
+}
 .agent-name{
-  max-width:50%;
   align-self:center;
 }
 

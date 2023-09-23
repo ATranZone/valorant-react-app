@@ -36,7 +36,7 @@ export default function MapPage() {
             These maps are currently or have once been in the competitive map
             pool.
           </p>
-          {mapList};
+          {mapList}
         </main>
       </>
     </div>

@@ -1,4 +1,6 @@
-import AgentCard from "../AgentCard/AgentCard.jsx";
+import AgentCard from "../../components/AgentCard/AgentCard.jsx";
+import NavBar from "../../components/Navbar/Navbar.jsx";
+import "./AgentPage.css";
 import { useState, useEffect } from "react";
 
 export default function Main() {
@@ -25,9 +27,12 @@ export default function Main() {
   ));
 
   return (
-    <main className="main-wrapper">
-      <h1>Agents</h1>
-      <div className="agentCardWrapper">{agents}</div>
-    </main>
+    <>
+      <NavBar />
+      <main className="main-wrapper">
+        <h1 className="main-header">Agents</h1>
+        <div className="agentCardWrapper">{agents}</div>
+      </main>
+    </>
   );
 }

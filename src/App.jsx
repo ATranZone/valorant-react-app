@@ -1,14 +1,17 @@
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Main from "./components/MainContent/Maincontent.jsx";
+import AgentPage from "./pages/AgentPage/AgentPage.jsx";
+import MapPage from "./pages/MapPage/MapPage.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <body>
-        <Navbar />
-        <Main />
-      </body>
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/" element={<AgentPage />}></Route>
+          <Route path="/maps" element={<MapPage />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

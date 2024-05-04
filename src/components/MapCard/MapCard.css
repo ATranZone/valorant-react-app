@@ -17,6 +17,12 @@
     max-width:70%;
 }
 
+.map-images{
+    display:flex;
+    flex-direction:row;
+    max-width:70%
+}
+
 @media(max-width:320px){
     .map-splash{
         max-width:100%;
